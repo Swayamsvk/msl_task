@@ -1,6 +1,6 @@
 // import { Avatar } from "@material-ui/core";
 import React, { forwardRef } from "react";
-import "./Post.css";
+import "./Posts.css";
 // import ThumbUpAltOutlinedIcon from "@material-ui/icons/ThumbUpAltOutlined";
 // import ChatOutlinedIcon from "@material-ui/icons/ChatOutlined";
 import ChatOutlinedIcon from "@mui/icons-material/ChatOutlined";
