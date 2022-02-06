@@ -8,7 +8,6 @@ import ChatIcon from "@mui/icons-material/Chat";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import Logo from "./asset/MainLogo.png";
-import HeaderOption from "./HeaderOption";
 
 function Header() {
   return (
@@ -21,12 +20,30 @@ function Header() {
         </div>
       </div>
       <div className="header__right">
-        <HeaderOption Icon={HomeIcon} title="Home" />
-        <HeaderOption Icon={SupervisorAccountIcon} title="My Network" />
-        <HeaderOption Icon={BusinessCenterIcon} title="Jobs" />
-        <HeaderOption Icon={ChatIcon} title="Messaging" />
-        <HeaderOption Icon={NotificationsIcon} title="Notification" />
-        <HeaderOption Icon={AccountCircleIcon} title="me" />
+        <div className="headerOption">
+          <HomeIcon className="headerOption_icon" />
+          <h3 className="headerOption_title">Home</h3>
+        </div>
+        <div className="headerOption">
+          <SupervisorAccountIcon className="headerOption_icon" />
+          <h3 className="headerOption_title">My Network</h3>
+        </div>
+        <div className="headerOption">
+          <BusinessCenterIcon className="headerOption_icon" />
+          <h3 className="headerOption_title">Jobs</h3>
+        </div>
+        <div className="headerOption">
+          <ChatIcon className="headerOption_icon" />
+          <h3 className="headerOption_title">Messaging</h3>
+        </div>
+        <div className="headerOption">
+          <NotificationsIcon className="headerOption_icon" />
+          <h3 className="headerOption_title">Notification</h3>
+        </div>
+        <div className="headerOption">
+          <AccountCircleIcon className="headerOption_icon" />
+          <h3 className="headerOption_title">me</h3>
+        </div>
       </div>
     </div>
   );
