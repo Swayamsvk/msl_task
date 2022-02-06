@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./Feed.css";
 import CreateIcon from "@mui/icons-material/Create";
-import ImageIcon from "@mui/icons-material/Image";
 import SubscriptionsIcon from "@mui/icons-material/Subscriptions";
 import ArticleOutlinedIcon from "@mui/icons-material/ArticleOutlined";
-import EventNoteIcon from "@mui/icons-material/EventNote";
-import CalendarViewDayIcon from "@mui/icons-material/CalendarViewDay";
 import CameraAltOutlinedIcon from "@mui/icons-material/CameraAltOutlined";
+import SendIcon from "@mui/icons-material/Send";
 import Post from "../Posts/Posts";
 import axios from "axios";
-// import FlipMove from "react-flip-move";
 
 function Feed() {
   useEffect(() => {
@@ -37,6 +34,7 @@ function Feed() {
           <form>
             <input type="text" />
           </form>
+          <SendIcon />
         </div>
         <div className="feed_inputOption">
           <div className="inputOption">
@@ -58,9 +56,10 @@ function Feed() {
         <Post
           key={id}
           name={curPost.user.name}
+          title={curPost.created_at.slice(0, 10)}
           description={curPost.user.bio}
-          message={curPost.createdAt}
-          // photoUrl={photoUrl}
+          profilePhotoUrl={curPost.user.profile_image.medium}
+          mainPhotoUrl={curPost.urls.regular}
         />
       ))}
     </div>

@@ -1,5 +1,5 @@
-// import { Avatar } from "@material-ui/core";
-import React, { forwardRef } from "react";
+import { Avatar } from "@mui/material";
+import React from "react";
 import "./Posts.css";
 // import ThumbUpAltOutlinedIcon from "@material-ui/icons/ThumbUpAltOutlined";
 // import ChatOutlinedIcon from "@material-ui/icons/ChatOutlined";
@@ -10,18 +10,19 @@ import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
 // import ShareOutlinedIcon from "@material-ui/icons/ShareOutlined";
 // import SendOutlinedIcon from "@material-ui/icons/SendOutlined";
 
-const Post = forwardRef(({ name, description, message, photoUrl }, ref) => {
+const Post = ({ name, title, description, profilePhotoUrl, mainPhotoUrl }) => {
   return (
-    <div ref={ref} className="post">
+    <div className="post">
       <div className="post_header">
-        {/* <Avatar src={photoUrl}></Avatar> */}
+        <Avatar src={profilePhotoUrl}></Avatar>
         <div className="postInfo">
           <h2>{name}</h2>
-          <p>{description}</p>
+          <p>{title}</p>
         </div>
       </div>
       <div className="post_body">
-        <p>{message}</p>
+        <p>{description}</p>
+        <img src={mainPhotoUrl} style={{ height: "500px", width: "100%" }} />
       </div>
       <div className="post_buttons">
         <div className="inputOption">
@@ -31,20 +32,16 @@ const Post = forwardRef(({ name, description, message, photoUrl }, ref) => {
 
         <div className="inputOption">
           <ChatOutlinedIcon style={{ color: "gray" }} />
-          <h4>Subscriptions</h4>
+          <h4>Comment</h4>
         </div>
 
         <div className="inputOption">
           <ShareOutlinedIcon style={{ color: "gray" }} />
-          <h4>Subscriptions</h4>
-        </div>
-        <div className="inputOption">
-          <SendOutlinedIcon style={{ color: "gray" }} />
-          <h4>Subscriptions</h4>
+          <h4>Share</h4>
         </div>
       </div>
     </div>
   );
-});
+};
 
 export default Post;
