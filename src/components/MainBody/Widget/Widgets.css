@@ -1,6 +1,6 @@
 .widgets {
   flex: 0.2;
-  position: sticky;
+
   top: 80px;
   background-color: white;
   border-radius: 10px;
@@ -21,34 +21,25 @@
   font-weight: 400;
 }
 
-.widget_article {
+.widget_name {
   display: flex;
+  flex-direction: row;
   padding: 10px;
   cursor: pointer;
 }
 
-.widget_article:hover {
+.widget_name:hover {
   background-color: whitesmoke;
 }
-
-.widgets_articleleft {
-  color: #0177b7;
-  margin-right: 5px;
-}
-
-.widgets_articleleft > .MuiSvgIcon-root {
-  font-size: 15px;
-}
-
-.widgets_articleright {
+.widgets_nameright {
   flex: 1;
 }
 
-.widgets_articleright > h4 {
+.widgets_nameright > h4 {
   font-size: 14px;
 }
 
-.widgets_articleright > p {
+.widgets_nameright > p {
   font-size: 12px;
   color: gray;
 }

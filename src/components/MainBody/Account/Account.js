@@ -1,37 +1,30 @@
-//import { Avatar } from "@material-ui/core";
 import React from "react";
-// import { Avatar } from '@material-ui/core';
 import "./Account.css";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import Divider from "@mui/material/Divider";
 
 function Sidebar() {
-  const recentItems = (topic) => (
-    <div className="recentItem">
-      <span className="sidebar_hash">#</span>
-      <p>{topic}</p>
-    </div>
-  );
-
   return (
     <div className="sidebar">
-      <div className="sidebar_top">
-        <img
-          src="https://images.unsplash.com/photo-1560345573-9f453083c335?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NjR8fHxlbnwwfHx8&auto=format&fit=crop&w=500&q=60"
-          alt="cover pics"
-        />
-        {/* <Avatar src={user.photoUrl} className="sidebar_avatar">
-          {user.email[0]}
-        </Avatar> */}
-        {/* <h2>{user.displayName}</h2> */}
-        {/* <h4>{user.email}</h4> */}
-      </div>
       <div className="sidebar_stats">
         <div className="sidebar_stat">
-          <p>Who viewed you</p>
-          <p className="stat_number">2,432</p>
+          <AccountCircleIcon className="account_icon" />
         </div>
-        <div className="sidebar_stat">
-          <p>Views on post</p>
-          <p className="stat_number">1,232</p>
+        <div className="account_name">
+          <p>Lucie Montgometry</p>
+        </div>
+        <div className="account_title">
+          <p>UI/UX Designer</p>
+        </div>
+        <div className="account_details">
+          <div className="account_title" style={{ marginLeft: "6%" }}>
+            <h3>767</h3>
+            <div style={{ fontSize: "20px", fontWeight: 100 }}>Connections</div>
+          </div>
+          <div className="account_title" style={{ marginRight: "6%" }}>
+            <h3>60</h3>
+            <div style={{ fontSize: "20px", fontWeight: 100 }}>Views</div>
+          </div>
         </div>
       </div>
     </div>

@@ -1,16 +1,13 @@
 import React from "react";
 import "./Widgets.css";
-import InfoIcon from "@mui/icons-material/Info";
-// import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
+import Divider from "@mui/material/Divider";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
 
 function Widgets() {
-  const newsArticle = (heading, subtitle) => (
-    <div className="widget_article">
-      <div className="widgets_articleleft">
-        {/* <FiberManualRecordIcon /> */}
-      </div>
-
-      <div className="widgets_articleright">
+  const connections = (heading, subtitle) => (
+    <div className="widget_name">
+      <div className="widgets_nameright">
         <h4>{heading}</h4>
         <p>{subtitle}</p>
       </div>
@@ -20,12 +17,17 @@ function Widgets() {
   return (
     <div className="widgets">
       <div className="widget_header">
-        <h2>LinkedIn News</h2>
-        <InfoIcon />
+        <h2>People you may know</h2>
       </div>
+      <Divider />
 
-      {newsArticle("Coronavirus: Lagos updates", "Tops news - 324 readers")}
-      {newsArticle("Bitcoin hits new high", "Tops news - 2,324 readers")}
+      {connections("Nina Douglas", "Recruiter - Orange")}
+      <Divider />
+      {connections("Harry Cladwell", "Looking for team Lead Java Developer")}
+      <Divider />
+      {connections("Hattie Patrick", "UI/UX Designer")}
+      <Divider />
+      {connections("Fannie Santiego", "SEO Specialist")}
     </div>
   );
 }

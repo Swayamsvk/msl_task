@@ -3,8 +3,10 @@ import "./Feed.css";
 import CreateIcon from "@mui/icons-material/Create";
 import ImageIcon from "@mui/icons-material/Image";
 import SubscriptionsIcon from "@mui/icons-material/Subscriptions";
+import ArticleOutlinedIcon from "@mui/icons-material/ArticleOutlined";
 import EventNoteIcon from "@mui/icons-material/EventNote";
 import CalendarViewDayIcon from "@mui/icons-material/CalendarViewDay";
+import CameraAltOutlinedIcon from "@mui/icons-material/CameraAltOutlined";
 import Post from "../Posts/Posts";
 import axios from "axios";
 // import FlipMove from "react-flip-move";
@@ -17,59 +19,47 @@ function Feed() {
       )
       .then((response) => {
         console.log(response.data, "this is the data==============>");
+        setPosts(response.data);
       })
       .catch((error) => {
         console.log(error);
       });
   }, []);
 
-  const [input, setInput] = useState("");
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {}, []);
-
-  const sendPost = (e) => {
-    e.preventDefault();
-  };
-
   return (
     <div className="feed">
       <div className="feed_inputContainer">
         <div className="feed_input">
           <CreateIcon />
           <form>
-            <input
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              type="text"
-            />
-            <button onClick={sendPost} type="submit">
-              Send
-            </button>
+            <input type="text" />
           </form>
         </div>
         <div className="feed_inputOption">
           <div className="inputOption">
+            <ArticleOutlinedIcon style={{ color: "#C0CBCD" }} />
+            <h4>Article</h4>
+          </div>
+          <div className="inputOption">
+            <CameraAltOutlinedIcon style={{ color: "#C0CBCD" }} />
+            <h4>Image</h4>
+          </div>
+          <div className="inputOption">
             <SubscriptionsIcon style={{ color: "#C0CBCD" }} />
             <h4>Video</h4>
-          </div>
-          <div className="inputOption">
-            <EventNoteIcon style={{ color: "#C0CBCD" }} />
-            <h4>Event</h4>
-          </div>
-          <div className="inputOption">
-            <CalendarViewDayIcon style={{ color: "#C0CBCD" }} />
-            <h4>Subscriptions</h4>
           </div>
         </div>
       </div>
 
-      {posts.map(({ id, data: { name, description, message, photoUrl } }) => (
+      {posts.map((curPost, id) => (
         <Post
           key={id}
-          name={name}
-          description={description}
-          message={message}
+          name={curPost.user.name}
+          description={curPost.user.bio}
+          message={curPost.createdAt}
           // photoUrl={photoUrl}
         />
       ))}
