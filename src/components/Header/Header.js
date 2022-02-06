@@ -20,34 +20,41 @@ function Header() {
           <input placeholder="Search" type="text" />
         </div>
       </div>
+
       <div className="header__right">
         <div className="headerOption">
           <HomeOutlinedIcon className="headerOption_icon" />
           <h3 className="headerOption_title">Home</h3>
         </div>
+
         <div className="headerOption">
           <PeopleOutlinedIcon className="headerOption_icon" />
           <h3 className="headerOption_title">Network</h3>
         </div>
+
         <div className="headerOption">
           <ChatBubbleOutlineOutlinedIcon className="headerOption_icon" />
           <h3 className="headerOption_title">Messaging</h3>
         </div>
+
         <div className="headerOption">
           <NotificationsNoneOutlinedIcon className="headerOption_icon" />
           <h3 className="headerOption_title">Notification</h3>
         </div>
+
         <div className="headerOption">
           <BusinessCenterOutlinedIcon className="headerOption_icon" />
           <h3 className="headerOption_title">Jobs</h3>
         </div>
+
         <div className="headerOption">
           <GridViewOutlinedIcon className="headerOption_icon" />
           <h3 className="headerOption_title">Work</h3>
         </div>
+
         <div className="headerOption_account">
           <AccountCircleIcon className="headerOption_icon" />
-          <h3 className="headerOption_title">me</h3>
+          <h3 className="headerOption_title">Lucie Montgometry</h3>
         </div>
       </div>
     </div>

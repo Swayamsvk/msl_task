@@ -1,14 +1,9 @@
 import { Avatar } from "@mui/material";
 import React from "react";
 import "./Posts.css";
-// import ThumbUpAltOutlinedIcon from "@material-ui/icons/ThumbUpAltOutlined";
-// import ChatOutlinedIcon from "@material-ui/icons/ChatOutlined";
 import ChatOutlinedIcon from "@mui/icons-material/ChatOutlined";
 import ThumbUpAltOutlinedIcon from "@mui/icons-material/ThumbUpAltOutlined";
 import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
-import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
-// import ShareOutlinedIcon from "@material-ui/icons/ShareOutlined";
-// import SendOutlinedIcon from "@material-ui/icons/SendOutlined";
 
 const Post = ({ name, title, description, profilePhotoUrl, mainPhotoUrl }) => {
   return (
@@ -24,6 +19,7 @@ const Post = ({ name, title, description, profilePhotoUrl, mainPhotoUrl }) => {
         <p>{description}</p>
         <img src={mainPhotoUrl} style={{ height: "500px", width: "100%" }} />
       </div>
+
       <div className="post_buttons">
         <div className="inputOption">
           <ThumbUpAltOutlinedIcon style={{ color: "gray" }} />

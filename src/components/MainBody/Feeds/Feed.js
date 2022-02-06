@@ -32,19 +32,25 @@ function Feed() {
         <div className="feed_input">
           <CreateIcon />
           <form>
-            <input type="text" />
+            <input
+              type="text"
+              placeholder="Write here.Add images or video for visual impact."
+            />
           </form>
           <SendIcon />
         </div>
+
         <div className="feed_inputOption">
           <div className="inputOption">
             <ArticleOutlinedIcon style={{ color: "#C0CBCD" }} />
             <h4>Article</h4>
           </div>
+
           <div className="inputOption">
             <CameraAltOutlinedIcon style={{ color: "#C0CBCD" }} />
             <h4>Image</h4>
           </div>
+
           <div className="inputOption">
             <SubscriptionsIcon style={{ color: "#C0CBCD" }} />
             <h4>Video</h4>

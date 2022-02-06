@@ -1,8 +1,6 @@
 import React from "react";
 import "./Widgets.css";
 import Divider from "@mui/material/Divider";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
 
 function Widgets() {
   const connections = (heading, subtitle) => (
