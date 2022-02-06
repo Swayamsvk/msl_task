@@ -2,7 +2,7 @@ import React from "react";
 import "./Account.css";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
-function Sidebar() {
+function Account() {
   return (
     <div className="sidebar">
       <div className="sidebar_stats">
@@ -34,4 +34,4 @@ function Sidebar() {
   );
 }
 
-export default Sidebar;
+export default Account;

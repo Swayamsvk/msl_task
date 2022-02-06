@@ -15,7 +15,6 @@ function Feed() {
         "https://api.unsplash.com/photos?page=1&&client_id=41d46225d571eaf038ef9de4a666a459a6ff9a1e19b433390fdd98794693621d"
       )
       .then((response) => {
-        console.log(response.data, "this is the data==============>");
         setPosts(response.data);
       })
       .catch((error) => {
