@@ -34,14 +34,6 @@ function Sidebar() {
           <p className="stat_number">1,232</p>
         </div>
       </div>
-
-      <div className="sidebar_bottom">
-        <p>Recent</p>
-        {recentItems("reactjs")}
-        {recentItems("JavaScript")}
-        {recentItems("Ruby")}
-        {recentItems("Ruby on Rails")}
-      </div>
     </div>
   );
 }
